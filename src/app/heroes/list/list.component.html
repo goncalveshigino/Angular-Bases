@@ -1,10 +1,18 @@
 
 <h3>Lista de Herois</h3>
 
-<h3>Heroi Eliminado <small class="text-danger">Heroi</small> </h3>
-<h3>Nao ha nenhum eliminado</h3>
+<div *ngIf="deletedHero; else nothingWasDeleted">
+  <h3>Heroi Eliminado <small class="text-danger">{{ deletedHero }}</small> </h3>
+</div>
 
-<button class="btn btn-outline-danger">
+<ng-template #nothingWasDeleted>
+  <h3>Nao ha nenhum eliminado</h3>
+</ng-template>
+
+<button
+  *ngIf="heroNames.length > 0"
+  (click)="removeLastHero()"
+  class="btn btn-outline-danger">
   Eliminar ultimo heroi
 </button>
 
