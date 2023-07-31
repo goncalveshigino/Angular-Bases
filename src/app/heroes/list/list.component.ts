@@ -13,7 +13,6 @@ export class ListComponent {
 
   removeLastHero(): void {
     this.deletedHero = this.heroNames.pop();
-
   }
 
 }
