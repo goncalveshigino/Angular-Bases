@@ -1,9 +1,19 @@
 <h4>Adicionar formulario</h4>
 
-<form class="row">
-    <input type="text" class="formcontrol mb-2" placeholder="Nome">
+<form class="row" (ngSubmit)="emitCharacter()">
+    <input
+         type="text"
+         [(ngModel)]="character.name"
+         name="name"
+         class="formcontrol mb-2"
+         placeholder="Nome">
 
-    <input type="number" class="formcontrol mb-2" placeholder="Poder">
+    <input
+         type="number"
+         [(ngModel)]="character.power"
+         name="power"
+         class="formcontrol mb-2"
+         placeholder="Poder">
 
     <button type="submit" class="btn btn-primary">
       Adicionar
