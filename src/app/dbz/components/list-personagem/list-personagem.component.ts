@@ -9,8 +9,6 @@ import { DbzService } from '../../services/dbz.service';
 })
 export class ListPersonagemComponent {
 
-
-
   @Input()
   public characterList: Character[] = []
 
@@ -21,6 +19,7 @@ export class ListPersonagemComponent {
     if ( !id ) return;
     this.onDelete.emit( id );
   }
+  
 
 }
 
